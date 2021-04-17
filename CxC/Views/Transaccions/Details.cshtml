@@ -1,0 +1,58 @@
+﻿@model CxC.Models.Transaccion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Transaccion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo_Movimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo_Movimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroDoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroDoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaTrans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaTrans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Monto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Monto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TansID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

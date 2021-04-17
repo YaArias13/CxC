@@ -1,0 +1,69 @@
+﻿@model IEnumerable<CxC.Models.AsientoContable>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CuentaContable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoMovimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaAsiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoAsiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CuentaContable)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoMovimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaAsiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MontoAsiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AsientoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AsientoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AsientoID })
+        </td>
+    </tr>
+}
+
+</table>

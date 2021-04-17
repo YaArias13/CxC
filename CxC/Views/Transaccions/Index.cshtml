@@ -1,0 +1,57 @@
+﻿@model IEnumerable<CxC.Models.Transaccion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo_Movimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroDoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaTrans)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Monto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo_Movimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroDoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaTrans)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Monto)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TansID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TansID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TansID })
+        </td>
+    </tr>
+}
+
+</table>

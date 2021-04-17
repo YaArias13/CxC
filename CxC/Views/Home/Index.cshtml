@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<head>
+    <style type="text/css">
+
+
+        .content {
+            color: #009900;
+            font-weight: bold;
+            font-size: 4em;
+            overflow: hidden;
+            font-family: 'lato', sans-serif;
+            margin: 15% 60% 5% 10%;
+            width: 50vh;
+            height: 30vh;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+            .content span {
+                display: block;
+                font-size: 0.8em;
+                opacity: 0.9;
+            }
+
+            .content div {
+                position: fixed;
+                margin: 2vh 0;
+                opacity: 0;
+                right: 25vw;
+                width: 100vw;
+                animation-name: animate;
+                animation: animate 32s linear infinite;
+            }
+
+
+                .content div:nth-child(2) {
+                    animation-delay: 4s;
+                }
+
+                .content div:nth-child(3) {
+                    animation-delay: 8s;
+                }
+
+                .content div:nth-child(4) {
+                    animation-delay: 12s;
+                }
+
+        @@keyframes animate {
+            0% {
+                opacity: 0;
+                filter: blur(20px);
+                transform: scale(12);
+            }
+
+            3% {
+                opacity: 1;
+                filter: blur(0px);
+                transform: scale(1);
+            }
+
+            10% {
+                opacity: 1;
+                filter: blur(0px);
+                transform: scale(0.9);
+            }
+
+            13% {
+                opacity: 0;
+                filter: blur(10px);
+                transform: scale(0.1);
+            }
+
+            80% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div>Examen Final</div>
+        <div>Cuentas por Cobrar<span></span></div>
+        <div><span>Proximamente en Cines</span></div>
+    </div>
+
+</body>
